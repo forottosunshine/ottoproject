@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>19th Station: OTTO's Sky Full Of Dreams</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#04091a;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:2rem 1rem;font-family:'Outfit',sans-serif}
+.wrap{width:100%;max-width:460px}
+.r{background:#08112b;border-radius:20px;position:relative;overflow:hidden;padding:2rem 1.75rem 1.75rem}
+.bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 25%,rgba(70,120,210,0.25) 0%,transparent 70%),radial-gradient(ellipse 45% 30% at 50% 18%,rgba(160,200,255,0.12) 0%,transparent 60%),linear-gradient(170deg,#060f28 0%,#0b1e4a 40%,#0d2255 60%,#08112b 100%);pointer-events:none}
+.beam{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:300px;height:380px;background:radial-gradient(ellipse 55% 100% at 50% 0%,rgba(140,190,255,0.15) 0%,transparent 75%);pointer-events:none}
+.con{position:relative;z-index:2}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
+.stn{display:flex;align-items:center;gap:8px}
+.snum{width:26px;height:26px;border-radius:50%;background:rgba(200,220,255,0.1);border:1px solid rgba(180,210,255,0.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:#d4e8ff}
+.stxt{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.18em;color:rgba(190,215,255,0.55);text-transform:uppercase}
+.lpill{display:flex;align-items:center;gap:5px;background:rgba(76,218,155,0.1);border:1px solid rgba(76,218,155,0.22);border-radius:99px;padding:3px 10px;font-size:10px;letter-spacing:0.1em;color:#7de8ba;text-transform:uppercase}
+.ldot{width:5px;height:5px;border-radius:50%;background:#4cda9b;animation:p 1.6s infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:0.3}}
+.ttl{font-family:'Cormorant Garamond',serif;font-size:33px;font-weight:300;font-style:italic;color:#e8f0ff;line-height:1.2;margin-bottom:4px}
+.ttl em{font-style:normal;color:#d4e0a0}
+.tsub{font-size:11px;font-weight:300;letter-spacing:0.2em;color:rgba(170,195,255,0.38);text-transform:uppercase;margin-bottom:1.75rem}
+.sep{height:1px;background:linear-gradient(90deg,rgba(110,155,255,0.28),rgba(110,155,255,0.06),transparent);margin-bottom:1.5rem}
+.gey{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(155,185,255,0.42);margin-bottom:4px}
+.gnum{font-family:'Space Mono',monospace;font-size:36px;font-weight:700;color:#fff;margin-bottom:1.25rem}
+.gnum span{font-size:15px;color:rgba(155,185,255,0.45);margin-left:5px;font-weight:400}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:1.75rem}
+.sc{background:rgba(255,255,255,0.04);border:1px solid rgba(100,150,255,0.13);border-radius:12px;padding:.875rem 1rem}
+.sl{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(155,185,255,0.42);margin-bottom:8px}
+.sv{font-family:'Space Mono',monospace;font-size:17px;font-weight:700}
+.sv.g{color:#7de8ba}.sv.y{color:#d4e0a0}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.pl{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(155,185,255,0.38)}
+.pp{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#7de8ba}
+.trk{height:6px;border-radius:99px;background:rgba(255,255,255,0.07);position:relative;margin-bottom:7px}
+.fl{height:100%;border-radius:99px;background:linear-gradient(90deg,#1a5fc4,#4cda9b);position:relative;transition:width 0.8s ease}
+.fl::after{content:'';position:absolute;right:-5px;top:50%;transform:translateY(-50%);width:12px;height:12px;border-radius:50%;background:#a0f0cc;box-shadow:0 0 10px rgba(160,240,204,0.8),0 0 20px rgba(76,218,155,0.4)}
+.pe{display:flex;justify-content:space-between;font-size:10px;color:rgba(135,165,255,0.28);margin-bottom:1.75rem}
+.last-box{background:rgba(255,255,255,0.03);border:1px solid rgba(100,150,255,0.13);border-radius:12px;padding:.875rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.last-label{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(155,185,255,0.42);margin-bottom:5px}
+.last-value{font-size:13px;color:#cddeff}
+.last-icon{font-size:18px;opacity:0.25;flex-shrink:0}
+.ft{font-size:10px;color:rgba(135,165,255,0.2);text-align:center;margin-top:1.25rem;letter-spacing:0.1em;text-transform:uppercase}
+.loading{font-size:13px;color:rgba(155,185,255,0.35);text-align:center;padding:1rem 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="r">
+  <div class="bg"></div>
+  <div class="beam"></div>
+  <div class="con">
+    <div class="topbar">
+      <div class="stn">
+        <div class="snum">19</div>
+        <span class="stxt">TH STATION</span>
+      </div>
+      <div class="lpill"><span class="ldot"></span>Live</div>
+    </div>
+    <div class="ttl">OTTO's <em>✦</em> Sky Full of Dreams</div>
+    <div class="tsub">From 0 to 19 — You always with me</div>
+    <div class="sep"></div>
+    <div class="gey">Total Goal</div>
+    <div class="gnum">30,000<span>THB</span></div>
+    <div class="sgrid">
+      <div class="sc"><div class="sl">ยอดโดเนทปัจจุบัน</div><div class="sv g" id="sd">—</div></div>
+      <div class="sc"><div class="sl">ต้องการยอดเงินอีก</div><div class="sv y" id="sr">—</div></div>
+    </div>
+    <div class="ph"><span class="pl">ความคืบหน้า</span><span class="pp" id="pp">—</span></div>
+    <div class="trk"><div class="fl" id="pf" style="width:0%"></div></div>
+    <div class="pe"><span>0 THB</span><span>30,000 THB</span></div>
+    <div class="last-box">
+      <div>
+        <div class="last-label">โดเนทล่าสุดเมื่อ</div>
+        <div class="last-value" id="lt">กำลังโหลด...</div>
+      </div>
+      <div class="last-icon">✦</div>
+    </div>
+    <div class="ft">#19THSTATIONOTTO ✦ Refresh เพื่ออัพเดทยอด</div>
+  </div>
+</div>
+</div>
+
+<script>
+// ============================================
+// วาง URL ของ Apps Script ที่ Deploy แล้วตรงนี้
+const API_URL = 'https://script.google.com/macros/s/AKfycbz9FrhXg-7NQkPDFCCtnslM4LQdo9dl1JLcF7wAeSs-pkMhuzAEU1TsoRxGCkIcXTXm/exec';
+// ============================================
+
+const GOAL = 30000;
+const fmt  = n => n.toLocaleString('th-TH');
+
+function formatDate(iso) {
+  if (!iso) return 'ยังไม่มีการโดเนท';
+  try {
+    const d = new Date(iso);
+    const date = `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()+543}`;
+    const time = `${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')} น.`;
+    return `${date} เวลา ${time}`;
+  } catch(e) {
+    return iso;
+  }
+}
+
+async function loadData() {
+  try {
+    const res  = await fetch(API_URL);
+    const data = await res.json();
+
+    const pct = Math.min((data.total / GOAL) * 100, 100);
+    document.getElementById('sd').textContent = fmt(data.total) + ' THB';
+    document.getElementById('sr').textContent = fmt(Math.max(GOAL - data.total, 0)) + ' THB';
+    document.getElementById('pp').textContent = pct.toFixed(1) + '%';
+    document.getElementById('pf').style.width  = pct.toFixed(1) + '%';
+    document.getElementById('lt').textContent  = formatDate(data.lastTime);
+
+  } catch(e) {
+    document.getElementById('lt').textContent = 'โหลดข้อมูลไม่สำเร็จ';
+  }
+}
+
+loadData();
+</script>
+</body>
+</html>
