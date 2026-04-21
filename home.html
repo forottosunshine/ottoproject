@@ -459,7 +459,7 @@
               </div>
             </div>
             <div class="pe" style="margin-bottom: 0">
-              <span>0 THB</span><span>30,000 THB</span>
+              <span id="current-donate">0 THB</span><span>30,000 THB</span>
             </div>
           </div>
           <div class="last-box">
@@ -508,6 +508,8 @@
           document.getElementById("pp").textContent = pct.toFixed(1) + "%";
           document.getElementById("pf").style.width = pct.toFixed(1) + "%";
           document.getElementById("lt").textContent = formatDate(data.lastTime);
+          document.getElementById("current-donate").textContent =
+            fmt(data.total) + " THB";
         } catch (e) {
           document.getElementById("lt").textContent = "โหลดข้อมูลไม่สำเร็จ";
         }
